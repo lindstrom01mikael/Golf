@@ -53,5 +53,19 @@ namespace Golf
 			// Make a pause in this program
 			Console.ReadKey();
 		}
+		
+		/// <summary>
+		/// Convert the angle in grades into angle in radiens
+		/// </summary>
+		/// <param name="angle">Angle in grades</param>
+		/// <returns>Angle in radiens</returns>
+		static double AngleInRadiens(double angle) => Math.PI/180 * angle;
+		/// <summary>
+		/// Calculate the distance the ball fly
+		/// </summary>
+		/// <param name="velocity">Speed of the swing</param>
+		/// <param name="angleInRadiens">Angle in Radiens</param>
+		/// <returns>Distance in meter</returns>
+		static double Distance(double velocity, double angleInRadiens) => Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * angleInRadiens);
 	}
 }
